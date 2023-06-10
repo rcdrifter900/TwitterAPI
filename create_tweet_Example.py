@@ -9,8 +9,9 @@ from requests_oauthlib import OAuth1Session
 from Support.load_file import read_keys
 
 # Load keys
-consumer_key = read_keys()["AccessToken"]
-consumer_secret = read_keys()["AccessTokenSecret"]
+dict = read_keys()
+consumer_key = dict['Key']
+consumer_secret = dict['Secret']
 
 # Be sure to add replace the text of the with the text you wish to Tweet. You can also add parameters to post polls, quote Tweets, Tweet with reply settings, and Tweet to Super Followers in addition to other features.
 payload = {"text": "Dilbert is awesome :)"}
@@ -25,6 +26,7 @@ except ValueError:
     print(
         "There may have been an issue with the consumer_key or consumer_secret you entered."
     )
+    quit()
 
 resource_owner_key = fetch_response.get("oauth_token")
 resource_owner_secret = fetch_response.get("oauth_token_secret")
