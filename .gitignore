@@ -1,3 +1,5 @@
 resources/APIKey.txt
 .vscode/settings.json
 .gitignore
+Payload
+.DS_Store

@@ -3,15 +3,16 @@ import json
 import base64
 import hashlib
 import re
+import sys
 import requests
 import sqlite3
 from requests_oauthlib import OAuth1Session
-from Support.load_file import read_keys
+from Support.load_file import get_API_keys
 
 # Load keys
-dict = read_keys()
-consumer_key = dict['Key']
-consumer_secret = dict['Secret']
+dict = get_API_keys()
+consumer_key = dict['APIKey']
+consumer_secret = dict['APISecret']
 
 # Be sure to add replace the text of the with the text you wish to Tweet. You can also add parameters to post polls, quote Tweets, Tweet with reply settings, and Tweet to Super Followers in addition to other features.
 payload = {"text": "Dilbert is awesome :)"}
