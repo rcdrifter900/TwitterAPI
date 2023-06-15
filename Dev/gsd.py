@@ -24,7 +24,7 @@ api_secret = dict['APISecret']
 auth_url = "https://twitter.com/i/oauth2/authorize"
 token_url = "https://api.twitter.com/2/oauth2/token"
 redirect_uri = 'http://127.0.0.1:5000/oauth/callback'
-redis_url = 'rediss://red-ci53frenqqlc6v0m12og:6di3l9h2c1DTCbS5tEZUtGfvt1ySJIs0@oregon-redis.render.com:6379'
+redis_url = 'opps'
 
 r = redis.from_url(redis_url)
 
